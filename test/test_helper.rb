@@ -52,7 +52,7 @@ class ActionView::TestCase
 end
 
 class ActiveSupport::TestCase
-  parallelize(workers: 1)
+  parallelize(workers: ENV["PARALLEL_WORKERS"]&.to_i || :number_of_processors)
 
   include ActionDispatch::TestProcess
 
