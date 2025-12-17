@@ -56,7 +56,7 @@ jobs:
 
       - name: Run tests
         run: |
-          PARALLEL_WORKERS=${{matix.workers}} bin/rails test
+          PARALLEL_WORKERS=${{matrix.workers}} bin/rails test
 
       # - name: Run bazaar non ascii test
       #   env:
