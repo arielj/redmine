@@ -10,10 +10,10 @@ jobs:
 
     strategy:
       matrix:
-        ruby: ["3.3", "3.4"]
+        ruby: ["3.4"]
         db: ["mysql2"]
         os: ["macos-15", "macos-26"]
-        workers: [1, 4, 8, 12]
+        workers: [1, 6, 12]
       fail-fast: false
 
     services:
@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Redmine test environment
         uses: ./.github/actions/setup-redmine
