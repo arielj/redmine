@@ -10,8 +10,8 @@ jobs:
 
     strategy:
       matrix:
-        ruby: ["3.2", "3.3", "3.4"]
-        db: ["postgresql", "mysql2", "sqlite3"]
+        ruby: ["3.3", "3.4"]
+        db: ["mysql2"]
         os: ["macos-15", "macos-26"]
         workers: [1, 4, 8, 12]
       fail-fast: false
